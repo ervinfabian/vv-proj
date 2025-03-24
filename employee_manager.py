@@ -20,7 +20,7 @@ class EmployeeManager:
         if self.relations_manager.is_leader(employee):
             team_members_count = len(self.relations_manager.get_team_members(employee))
             salary += team_members_count * EmployeeManager.leader_bonus_per_member
-
+            print(team_members_count)
         return salary
 
     def calculate_salary_and_send_email(self, employee: Employee) -> None:

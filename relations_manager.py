@@ -39,6 +39,25 @@ class RelationsManager:
     def get_team_members(self, employee: Employee) -> list:
         if self.is_leader(employee):
             member_ids = self.teams[employee.id]
+            print("***************************")
+            print(self.teams)
+            print(member_ids)
+            print(self.employee_list)
             members = [e.id for e in self.employee_list if e.id in member_ids]
+            print(members)
+            print("***************************")
 
             return members
+        
+    def get_employee_by_id(self, id: int) -> Employee:
+        for e in self.employee_list:
+            if e.id == id:
+                return e
+    def get_employee_by_name(self, first_name: str, last_name: str) -> Employee:
+        for e in self.employee_list:
+            if e.first_name == first_name and e.last_name == last_name:
+                return e
+    
+    def add_employee(self, first_name: str, last_name: str, base_salary: int, birthdate: datetime.date, hire_date: datetime.date):
+        self.employee_list.append(Employee(id = len(self.employee_list)+1, first_name=first_name, last_name=last_name, base_salary=base_salary, birth_date=birthdate, hire_date=hire_date))
+
