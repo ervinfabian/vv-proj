@@ -27,7 +27,7 @@ class EmployeeManager:
         salary = self.calculate_salary(employee)
 
         print(f"{employee.first_name} {employee.last_name} your salary: {salary} has been transferred to you.")
-        pass
+        return (employee.first_name, employee.last_name, salary)
 
 
 if __name__ == '__main__':
