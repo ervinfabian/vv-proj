@@ -15,7 +15,6 @@ def test_john_doe_birthday_and_if_is_leader():
             output = True
     assert output == True, "There is no team leader called John Doe, with 31.01.1970 birthdate"
 
-    # If the test is not passed, there is no team leader called John Doe whose birthdate is 31.01.1970
 
 def test_myrta_and_jettie_in_john_doe_team():
     # Check if John Doe’s team members are Myrta Torkelson and Jettie Lynch.
@@ -36,7 +35,6 @@ def test_myrta_and_jettie_in_john_doe_team():
 
     assert output ==  True, "Jettie Lynch and Myrta Torkelson are not John Doe's team members"
 
-    # If the test is not passed then 
 
 def test_andre_not_in_doe_team():
     # Make sure that Tomas Andre is not John Doe’s team member.
